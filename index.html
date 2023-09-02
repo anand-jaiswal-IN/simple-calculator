@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="title">
+        <h2> Simple Calculator</h2>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <div id="screen">
+                        <span id="small-screen-text">Empty</span>
+                        <span id="screen-text">0</span>
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="clearBtn" onclick="clearScreen()">AC</button></td>
+                <td colspan="2"><button id="backspaceBtn" onclick="backspaceClicked()">&#10060</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="numberClicked(this.innerHTML)">7</button></td>
+                <td><button onclick="numberClicked(this.innerHTML)">8</button></td>
+                <td><button onclick="numberClicked(this.innerHTML)">9</button></td>
+                <td><button onclick="expressionClicked('/')">&#247</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="numberClicked(this.innerHTML)">4</button></td>
+                <td><button onclick="numberClicked(this.innerHTML)">5</button></td>
+                <td><button onclick="numberClicked(this.innerHTML)">6</button></td>
+                <td><button onclick="expressionClicked('*')">&times;</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="numberClicked(this.innerHTML)">1</button></td>
+                <td><button onclick="numberClicked(this.innerHTML)">2</button></td>
+                <td><button onclick="numberClicked(this.innerHTML)">3</button></td>
+                <td><button onclick="expressionClicked('-')">&#8722</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="numberClicked(this.innerHTML)">0</button></td>
+                <td><button onclick="numberClicked(this.innerHTML)">.</button></td>
+                <td><button onclick="expressionClicked('+')">&#43</button></td>
+                <td><button onclick="calculate()">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+<script src="script.js"></script>
